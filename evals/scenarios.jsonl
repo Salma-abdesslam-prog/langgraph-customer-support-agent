@@ -1,0 +1,5 @@
+{"name": "simple_refund_approved", "input": "I'd like a refund for order 4521, I paid 89.99", "expected_tools": ["check_order", "refund_order"], "auto_approve": true}
+{"name": "simple_refund_rejected", "input": "I'd like a refund for order 4522", "expected_tools": ["check_order", "refund_order"], "auto_approve": false}
+{"name": "already_refunded_order", "input": "Please refund order 4530", "expected_tools": ["check_order"], "auto_approve": true}
+{"name": "unknown_order", "input": "Refund order 9999 please", "expected_tools": ["check_order"], "auto_approve": true}
+{"name": "damaged_package_ticket", "input": "My order 4521 arrived damaged, I need someone to look into it", "expected_tools": ["check_order", "create_ticket"], "auto_approve": true}
