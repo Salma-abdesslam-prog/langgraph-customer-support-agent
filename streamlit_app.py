@@ -90,8 +90,10 @@ with st.sidebar:
     st.dataframe(orders_table, hide_index=True, use_container_width=True)
     order_ids = sorted(store.orders.keys())
     st.caption(
-        f"Only {', '.join(order_ids)} are available — "
-        "try 9999 to see how the agent handles a missing order."
+        f"You can try the demo with order IDs **{', '.join(order_ids)}** — "
+        "use them when chatting with the agent (e.g. *'check order "
+        f"{order_ids[0]}'* or *'refund order {order_ids[1]}'*). "
+        "Want to see how it handles a missing order? Try **9999**."
     )
 
     st.divider()
