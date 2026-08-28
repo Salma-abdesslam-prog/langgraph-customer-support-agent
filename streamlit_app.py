@@ -90,8 +90,8 @@ with st.sidebar:
     st.dataframe(orders_table, hide_index=True, use_container_width=True)
     order_ids = sorted(store.orders.keys())
     st.caption(
-        f"Demo order IDs range from {order_ids[0]} to {order_ids[-1]} — "
-        "try any other number (e.g. 9999) to see how the agent handles a missing order."
+        f"Only {', '.join(order_ids)} are available — "
+        "try 9999 to see how the agent handles a missing order."
     )
 
     st.divider()
